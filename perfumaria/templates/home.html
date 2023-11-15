@@ -1,0 +1,119 @@
+{% extends 'base_templates/header.html' %}
+{% block title %} Registro {% endblock title %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      
+    <title>Perfumaria Monamour</title>
+  </head>
+
+  <body>
+
+    <!-- NavBar -->
+    <div class="header-bar">Frete grátis para pedidos acima de R$ 80</div>
+    <nav class="section-container nav-container">
+      <img class="logo-nav" src="assets/logo.png" alt="logo">
+      <ul class="nav-links">
+        <li class="link">
+        <div class="dropdown">
+          <a class="dropbtn">MODELOS</a>
+          <div class="dropdown-content">
+          <a href="#promotion">Promoções</a>
+          <a href="#tennis">Perfumes</a>
+          <a href="#social">Doces</a>
+          <a href="#slipper">Amadeirados</a>
+          </div>
+        </div>
+      </li>
+      </ul>
+
+      <!-- Nav Icons -->
+      <div class="nav-icons">
+        <span><i class="ri-search-line"></i></span>
+        <span><i class="ri-shopping-bag-2-line"></i></span>
+      </div>
+
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-dark" data-bs-toggle="modal" onclick="registerUser()">Register</button>
+
+      <!-- All Modals -->
+      <div class="modal fade" id="modalAll" tabindex="-1" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body" id="bodyModal">
+            </div>
+
+            <div class="modal-footer" id="footerModal">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </nav>
+
+    <header>
+           
+          <div class="botao"> <i class="ri-checkbox-blank-circle-fill"></i> </div>
+          <div class="botao"> <i class="ri-checkbox-blank-circle-fill"></i> </div>
+          <div class="botao"> <i class="ri-checkbox-blank-circle-fill"></i> </div>
+          <div class="botao"> <i class="ri-checkbox-blank-circle-fill"></i> </div>
+
+        </div>
+      
+      </section>
+    </header>
+
+    <section class="section-container sale-container" id="promotion">
+      <h2 class="section-title">On Sale</h2>
+      <div>
+
+        <nav class="section-container nav-container">
+        <div class="sale-card">
+          <img src="assets/sale-1.jpg" alt="sale">
+        </div>
+        
+
+        <div class="sale-card">
+          <img src="assets/sale-2.jpg" alt="sale">
+        </div>
+        
+        <div class="sale-card">
+          <img src="assets/sale-3.jpg" alt="sale">
+        </div>
+        </nav>
+        
+      </div>
+    </section>
+
+
+    <section class="section-container musthave-container">
+      <h2 class="section-title">Estilos</h2>
+      <div class="musthave-nav">
+        <a href="#">TODOS</a>
+        <a href="#">MASCULINO</a>
+        <a href="#">FEMININO</a>
+        <div class="dropdown">
+          <a class="dropbtn">MODELOS</a>
+          <div class="dropdown-content">
+            <a href="#promotion">Promoções</a>
+            <a href="#perfumes">Perfumes</a>
+            <a href="#doces">Doces</a>
+            <a href="#slipper">Amadeirados</a>
+          </div>
+        </div>
+      </div>
+
+{% include "base_templates/footer.html" %}
+ 
+
+{% endblock content %}

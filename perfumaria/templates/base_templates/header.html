@@ -1,0 +1,27 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Minha Página Home{% endblock %}</title>
+</head>
+<body>
+    <div class="header" style="background-color: #333; color: #fff; padding: 10px 0; text-align: center;">
+        <nav>
+            <div class="logo">
+                <a href="/"><img src="logo.png" alt="Logo da Minha Empresa" style="max-width: 150px; height: auto;"></a>
+            </div>
+            <ul class="menu" style="list-style: none; padding: 0;">
+                <li style="display: inline; margin-right: 20px;"><a href="/"> Home<a><style="text-decoration: none; color: #fff;">
+                <li style="display: inline; margin-right: 20px;"><a href="/sobre/"> Sobre<a> <style="text-decoration: none; color: #fff;">
+                <li style="display: inline; margin-right: 20px;"><a href="/perfumaria_list/"> Lista de Perfume<a> <style="text-decoration: none; color: #fff;">
+                <li style="display: inline; margin-right: 20px;"><a href="/register" >Registro<a> <style="text-decoration: none; color: #fff;">
+                <li style="display: inline; margin-right: 20px;"><a href="/login/"> Login<a> <style="text-decoration: none; color: #fff;">
+                <li style="display: inline; margin-right: 20px;"><a href="/logout/"> Logout<a> <style="text-decoration: none; color: #fff;">
+            </ul>
+        </nav>
+    </div>
+    {% block content %}{% endblock %}
+</body>
+</html>
